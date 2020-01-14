@@ -48,7 +48,7 @@ distprep:
 
 rpm:
 	$(MAKE) -C contrib/hawq-package $@
-	$(MAKE) -C pxf $@
+#	$(MAKE) -C pxf $@
 	$(MAKE) -C ranger-plugin $@
 	$(MAKE) -C contrib/hawq-package rpm-tarball
 
@@ -71,7 +71,7 @@ clean:
 	$(MAKE) -C contrib $@
 	$(MAKE) -C tools $@
 	$(MAKE) -C contrib/hawq-package $@
-	$(MAKE) -C pxf $@
+#	$(MAKE) -C pxf $@
 	$(MAKE) -C ranger-plugin $@
 	-$(MAKE) -C src feature-test-clean
 # Garbage from autoconf:
@@ -89,7 +89,7 @@ distclean maintainer-clean:
 	-$(MAKE) -C tools $@
 	-$(MAKE) -C src feature-test-clean
 	-$(MAKE) -C src $@
-	-$(MAKE) -C pxf $@
+#	-$(MAKE) -C pxf $@
 	-$(MAKE) -C ranger-plugin $@
 	-rm -f config.cache config.log config.status GNUmakefile
 # Garbage from autoconf:
